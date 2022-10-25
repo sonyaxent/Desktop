@@ -12,6 +12,8 @@ function scrollingText(word) {
 	  result.push(word)
 	}
 	return result
-  }
+  
   
   console.log(scrollingText("word"))
+  console.log(scrollingText("word"))
+  
