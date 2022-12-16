@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+section,
+article,
+img {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -15,7 +18,6 @@ body {
   display: grid;
   justify-content: center;
   align-items: stretch;
-  align-content: stretch;
   grid-template-columns: repeat(2, 200px);
   column-gap: 30px;
 }
@@ -37,38 +39,39 @@ body {
   }
 }
 
-.person {
-  pointer-events: all;
+.athlete {
+  display: block;
   cursor: pointer;
   transition: transform 1s;
-  overflow: auto;
 }
-.person:hover {
+.athlete:hover {
   z-index: 5;
   background: #EEEEEE;
   border-radius: 10px;
   transform: scale(1.09);
 }
-.person:hover img {
+.athlete:hover img {
   border-radius: 60px;
 }
-.person:hover .extra {
+.athlete:hover .athlete__extra {
   opacity: 1;
 }
-
-.photo {
-  position: relative;
+.athlete:hover .athlete__details {
+  background: inherit;
+  border-radius: inherit;
 }
-
-img {
-  transition: border-radius 1s;
+.athlete__photo {
+  position: relative;
   width: 200px;
   height: 200px;
-  border: 1px solid #fff;
+}
+.athlete__avatar {
+  width: 200px;
+  height: 200px;
+  transition: border-radius 1s;
   border-radius: 50%;
 }
-
-.rank {
+.athlete__rank {
   position: absolute;
   right: 10px;
   top: 84px;
@@ -83,28 +86,35 @@ img {
   font-size: 16px;
   line-height: 32px;
 }
-
-.details {
+.athlete__details {
   text-align: center;
 }
-
-.name {
-  margin: 0 auto;
+.athlete__name {
+  display: block;
+  margin-top: 8px;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
   color: #2F4F4F;
 }
-
-.extra {
+.athlete__extra {
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 9px;
   font-size: 18px;
   line-height: 21px;
-  /* identical to box height */
   text-align: center;
+  padding: 9px 33px 16px;
   color: #000000;
   opacity: 0;
+}
+.athlete__sport::after {
+  content: ",";
+}
+.athlete__pay::before {
+  content: "$";
+}
+.athlete__pay::after {
+  content: "M";
 }
 
 /*# sourceMappingURL=main.css.map */

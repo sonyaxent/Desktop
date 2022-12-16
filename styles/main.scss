@@ -20,7 +20,11 @@
   box-sizing: border-box;
 }
 
-body {
+body, 
+section,
+article,
+img
+ {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -33,7 +37,6 @@ body {
   display: grid;
   justify-content: center;
   align-items: stretch;
-  align-content: stretch;
   grid-template-columns: repeat(2, 200px);
   column-gap: 30px;
 
@@ -52,78 +55,100 @@ body {
   }
 }
 
-.person {
+.athlete {
   
-  
+  display: block;
+  cursor: pointer;
   transition: transform 1s; 
-  overflow: auto;
   
   &:hover {
     z-index: 5;
     background: #EEEEEE;
     border-radius: 10px;
     transform: scale(1.09);
+    
     img {
       border-radius: 60px;
     }
 
-    .extra {
+    .athlete__extra {
       opacity: 1;
     }
+    .athlete__details {
+      background: inherit;
+      border-radius: inherit;
+    }
   }
-}
 
-.photo {
-  position: relative;
-}
+  &__photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
 
-img {
-  transition: border-radius 1s;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
+  &__avatar {
+    width: 200px;
+    height: 200px;
+    transition: border-radius 1s;
+    border-radius: 50%;
+  }
 
-.rank {
-  position: absolute;
-  right: 10px;
-  top: 84px;
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  background-color: #fff;
-  color: #8b0000;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 16px;
-  line-height: 32px;
-}
+  &__rank {
+    position: absolute;
+    right: 10px;
+    top: 84px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-color: #fff;
+    color: #8b0000;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+  }
 
-.details {
-  text-align: center;
-}
+  &__details {
+    text-align: center;
+  }
 
-.name {
-  margin: 0 auto;
-  font-size: 20px;
-  line-height: 23px;
+  &__name {
+    display: block;
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 23px;
+  
+    text-align: center;
+  
+    color: #2F4F4F;
+  }
 
-  text-align: center;
+  &__extra {
+    display: inline-block;
 
-  color: #2F4F4F;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding: 9px 33px 16px;
+    color: #000000;
+    opacity: 0;
+  }
 
-.extra {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 9px;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
+  &__sport {
+    &::after {
+      content: ",";
+    }
+  }
 
-  text-align: center;
-
-  color: #000000;
-  opacity: 0;
+  &__pay {
+    &::before {
+      content: "$";
+    }
+    &::after {
+      content: "M";
+    }
+  }
 }
