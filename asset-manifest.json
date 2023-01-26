@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/myjsproject/static/css/main.457475da.css",
+    "main.js": "/myjsproject/static/js/main.1f74c2b6.js",
+    "static/js/787.a6a8a1e9.chunk.js": "/myjsproject/static/js/787.a6a8a1e9.chunk.js",
+    "static/media/misik.svg": "/myjsproject/static/media/misik.a22a7a4bde75c3e8047b3fb3853749ff.svg",
+    "static/media/piggy.svg": "/myjsproject/static/media/piggy.e1458deab8ef34019d02247bef4e1a16.svg",
+    "index.html": "/myjsproject/index.html",
+    "main.457475da.css.map": "/myjsproject/static/css/main.457475da.css.map",
+    "main.1f74c2b6.js.map": "/myjsproject/static/js/main.1f74c2b6.js.map",
+    "787.a6a8a1e9.chunk.js.map": "/myjsproject/static/js/787.a6a8a1e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.457475da.css",
+    "static/js/main.1f74c2b6.js"
+  ]
+}
